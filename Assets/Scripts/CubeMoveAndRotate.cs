@@ -16,20 +16,16 @@ public class CubeMoveAndRotate : MonoBehaviour
     private Vector3 _targetRotationVector;
     private float _rotateDone = 0;
     private Touch _touch;
-    private float _width;
-    private float _height;
+    private Camera _mainCamera;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _width = (float)Screen.width / 2.0f;
-        _height = (float)Screen.height / 2.0f;
-        print(_width);
-        print(_height);
     }
 
     private void Start()
     {
+        _mainCamera = Camera.main;
         Rotate();
     }
 
@@ -46,9 +42,8 @@ public class CubeMoveAndRotate : MonoBehaviour
             _touch = Input.GetTouch(0);
             if (_touch.phase == TouchPhase.Began || _touch.phase == TouchPhase.Moved)
             {
-                _targetPos = _touch.position;
-                _targetPos.x = ((_targetPos.x - _width) / 2.0f) / 100.0f;
-                _targetPos.y = ((_targetPos.y - _height) / 2.0f) / 100.0f;
+                _targetPos = _mainCamera.ScreenToWorldPoint(new Vector3(_touch.position.x, _touch.position.y,
+                    _mainCamera.nearClipPlane + 5f));
             }
         }
         
