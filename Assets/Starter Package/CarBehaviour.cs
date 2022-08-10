@@ -22,12 +22,12 @@ using UnityEngine;
  */
 public class CarBehaviour : MonoBehaviour
 {
-    public ReticleBehaviour Reticle;
+    public MarkerController Marker;
     public float Speed = 1.2f;
 
     private void Update()
     {
-        var trackingPosition = Reticle.transform.position;
+        var trackingPosition = Marker._markerGO.transform.position;
         if (Vector3.Distance(trackingPosition, transform.position) < 0.1)
         {
             return;

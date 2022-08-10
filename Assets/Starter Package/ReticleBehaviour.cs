@@ -26,15 +26,14 @@ using UnityEngine.XR.ARSubsystems;
 public class ReticleBehaviour : MonoBehaviour
 {
     public GameObject Child;
-    public ARRaycastManager ARRaycastManager;
-    public ARPlaneManager ARPlaneManager;
-    
+    public DrivingSurfaceManager DrivingSurfaceManager;
+
+    public ARPlane CurrentPlane;
 
     // Start is called before the first frame update
     private void Start()
     {
         Child = transform.GetChild(0).gameObject;
-        ARRaycastManager = GetComponent<ARRaycastManager>();
     }
 
     private void Update()
@@ -46,23 +45,21 @@ public class ReticleBehaviour : MonoBehaviour
         var screenCenter = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
 
         var hits = new List<ARRaycastHit>();
-        ARRaycastManager.Raycast(screenCenter, hits, TrackableType.PlaneWithinBounds);
-        
+        DrivingSurfaceManager.RaycastManager.Raycast(screenCenter, hits, TrackableType.PlaneWithinBounds);
+
+        CurrentPlane = null;
         ARRaycastHit? hit = null;
         if (hits.Count > 0)
         {
-            hit = hits[0];
+            var lockedPlane = DrivingSurfaceManager.LockedPlane;
+            hit = lockedPlane == null ? hits[0] : hits.SingleOrDefault(x => x.trackableId == lockedPlane.trackableId);
         }
 
         if (hit.HasValue)
         {
+            CurrentPlane = DrivingSurfaceManager.PlaneManager.GetPlane(hit.Value.trackableId);
             transform.position = hit.Value.pose.position;
-            Child.SetActive(true);
         }
-        else
-        {
-            Child.SetActive(false);
-        }
-        
+        Child.SetActive(CurrentPlane != null);
     }
 }

@@ -76,25 +76,29 @@ extern void ReticleBehaviour_Start_mA039052AF1E16911774EDEA0E413B90725FBBBC5 (vo
 extern void ReticleBehaviour_Update_mF1D127313E6C912BE462516903B8854A24AB6925 (void);
 // 0x00000020 System.Void ReticleBehaviour::.ctor()
 extern void ReticleBehaviour__ctor_m2CBBD6D514BEBCAA06CB1544E1489C52DDCDA871 (void);
-// 0x00000021 System.Single UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::get_featheringWidth()
+// 0x00000021 System.Void ReticleBehaviour/<>c__DisplayClass4_0::.ctor()
+extern void U3CU3Ec__DisplayClass4_0__ctor_mC1C4D3928D542710140A485BEAF947B1D34F0135 (void);
+// 0x00000022 System.Boolean ReticleBehaviour/<>c__DisplayClass4_0::<Update>b__0(UnityEngine.XR.ARFoundation.ARRaycastHit)
+extern void U3CU3Ec__DisplayClass4_0_U3CUpdateU3Eb__0_mF20029E516F025C418AABA6DD54BFFE1F6BFD3DF (void);
+// 0x00000023 System.Single UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::get_featheringWidth()
 extern void ARFeatheredPlaneMeshVisualizer_get_featheringWidth_m2945B61548EEE9250BE692F8592A6176D8BA7A2A (void);
-// 0x00000022 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::set_featheringWidth(System.Single)
+// 0x00000024 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::set_featheringWidth(System.Single)
 extern void ARFeatheredPlaneMeshVisualizer_set_featheringWidth_mF695F727A4B05DB7F8236445865092203FDE5639 (void);
-// 0x00000023 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::Awake()
+// 0x00000025 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::Awake()
 extern void ARFeatheredPlaneMeshVisualizer_Awake_mAE8DB3C77C9418A1972DF38B0A9EB5EF978A41C1 (void);
-// 0x00000024 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::OnEnable()
+// 0x00000026 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::OnEnable()
 extern void ARFeatheredPlaneMeshVisualizer_OnEnable_mFDE5CAE08F9A2A5FD0B0CADACB35C90E1A8C9990 (void);
-// 0x00000025 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::OnDisable()
+// 0x00000027 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::OnDisable()
 extern void ARFeatheredPlaneMeshVisualizer_OnDisable_mEFB59B42F3EBD943D3DD11D07F489F13DFC715F9 (void);
-// 0x00000026 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::ARPlane_boundaryUpdated(UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs)
+// 0x00000028 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::ARPlane_boundaryUpdated(UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs)
 extern void ARFeatheredPlaneMeshVisualizer_ARPlane_boundaryUpdated_m7D4228920DB050CA200942FB953F4727DB19E2BA (void);
-// 0x00000027 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::GenerateBoundaryUVs(UnityEngine.Mesh)
+// 0x00000029 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::GenerateBoundaryUVs(UnityEngine.Mesh)
 extern void ARFeatheredPlaneMeshVisualizer_GenerateBoundaryUVs_mBE84E3CEBD2C9EF15B5F498FF4CDF7E1EF5DD205 (void);
-// 0x00000028 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::.ctor()
+// 0x0000002A System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::.ctor()
 extern void ARFeatheredPlaneMeshVisualizer__ctor_m0553A1CAC9A932F42C3B0B8966F010964A2A3CAC (void);
-// 0x00000029 System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::.cctor()
+// 0x0000002B System.Void UnityEngine.XR.ARFoundation.Samples.ARFeatheredPlaneMeshVisualizer::.cctor()
 extern void ARFeatheredPlaneMeshVisualizer__cctor_mE1EA67F56E3AC54422BB6842C1D37CE0433A4C30 (void);
-static Il2CppMethodPointer s_methodPointers[41] = 
+static Il2CppMethodPointer s_methodPointers[43] = 
 {
 	CubeMoveAndRotate_Awake_m69D822BF8DA1DE6EA15B86695ECBEF90FB66D6E9,
 	CubeMoveAndRotate_Start_mE9AE5836F5CE96FC1F857F0490EA77DAFACAB498,
@@ -128,6 +132,8 @@ static Il2CppMethodPointer s_methodPointers[41] =
 	ReticleBehaviour_Start_mA039052AF1E16911774EDEA0E413B90725FBBBC5,
 	ReticleBehaviour_Update_mF1D127313E6C912BE462516903B8854A24AB6925,
 	ReticleBehaviour__ctor_m2CBBD6D514BEBCAA06CB1544E1489C52DDCDA871,
+	U3CU3Ec__DisplayClass4_0__ctor_mC1C4D3928D542710140A485BEAF947B1D34F0135,
+	U3CU3Ec__DisplayClass4_0_U3CUpdateU3Eb__0_mF20029E516F025C418AABA6DD54BFFE1F6BFD3DF,
 	ARFeatheredPlaneMeshVisualizer_get_featheringWidth_m2945B61548EEE9250BE692F8592A6176D8BA7A2A,
 	ARFeatheredPlaneMeshVisualizer_set_featheringWidth_mF695F727A4B05DB7F8236445865092203FDE5639,
 	ARFeatheredPlaneMeshVisualizer_Awake_mAE8DB3C77C9418A1972DF38B0A9EB5EF978A41C1,
@@ -138,7 +144,7 @@ static Il2CppMethodPointer s_methodPointers[41] =
 	ARFeatheredPlaneMeshVisualizer__ctor_m0553A1CAC9A932F42C3B0B8966F010964A2A3CAC,
 	ARFeatheredPlaneMeshVisualizer__cctor_mE1EA67F56E3AC54422BB6842C1D37CE0433A4C30,
 };
-static const int32_t s_InvokerIndices[41] = 
+static const int32_t s_InvokerIndices[43] = 
 {
 	4227,
 	4227,
@@ -164,14 +170,16 @@ static const int32_t s_InvokerIndices[41] =
 	3316,
 	4227,
 	4227,
-	6007,
-	6620,
+	6008,
+	6621,
 	3416,
 	4227,
 	4227,
 	4227,
 	4227,
 	4227,
+	4227,
+	2298,
 	4179,
 	3447,
 	4227,
@@ -180,13 +188,13 @@ static const int32_t s_InvokerIndices[41] =
 	3328,
 	3416,
 	4227,
-	6769,
+	6770,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	41,
+	43,
 	s_methodPointers,
 	0,
 	NULL,

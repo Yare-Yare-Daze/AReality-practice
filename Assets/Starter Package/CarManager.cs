@@ -25,14 +25,20 @@ using UnityEngine.XR.ARFoundation;
 public class CarManager : MonoBehaviour
 {
     public GameObject CarPrefab;
-    public ReticleBehaviour Reticle;
-    public DrivingSurfaceManager DrivingSurfaceManager;
+    public MarkerController Marker;
 
     public CarBehaviour Car;
 
     private void Update()
     {
-        
+        if (Car == null && WasTapped() && Marker.CurrentPlane != null)
+        {
+            // Spawn our car at the reticle location.
+            var obj = GameObject.Instantiate(CarPrefab);
+            Car = obj.GetComponent<CarBehaviour>();
+            Car.Marker = Marker;
+            Car.transform.position = Marker._markerGO.transform.position;
+        }
     }
 
     private bool WasTapped()
