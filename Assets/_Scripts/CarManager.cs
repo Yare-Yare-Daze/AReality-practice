@@ -34,7 +34,7 @@ public class CarManager : MonoBehaviour
         if (Car == null && WasTapped() && Marker.CurrentPlane != null)
         {
             // Spawn our car at the reticle location.
-            var obj = GameObject.Instantiate(CarPrefab);
+            var obj = GameObject.Instantiate(CarPrefab, transform);
             Car = obj.GetComponent<CarBehaviour>();
             Car.Marker = Marker;
             Car.transform.position = Marker._markerGO.transform.position;
