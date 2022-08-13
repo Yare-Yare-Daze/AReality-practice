@@ -1798,6 +1798,8 @@ struct ARSession_t13374A44A01F2C6D90578F93E0F0DA2482BE3014;
 struct ARSessionOrigin_tE7B28A1A19500BCC02711397A19E330425830BC3;
 // UnityEngine.XR.ARFoundation.ARTrackable
 struct ARTrackable_t1D98417758C08E98A333CDEC0C2C1688CE10B2E0;
+// UnityEngine.XR.ARFoundation.ARTrackedImageManager
+struct ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4;
 // System.Action
 struct Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07;
 // System.AggregateException
@@ -54168,8 +54170,8 @@ struct ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD_StaticFields
 // MainController
 struct MainController_tE084A72D51B125AA30DB8220A2EE35184D69BC59  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// UnityEngine.GameObject MainController::CarSpawner
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___CarSpawner_4;
+	// System.Collections.Generic.List`1<UnityEngine.GameObject> MainController::ControllingGameObjects
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___ControllingGameObjects_4;
 };
 
 // MarkerController
@@ -54737,6 +54739,8 @@ struct Tilemap_t18C4166D0AC702D5BFC0C411FA73C4B61D9D1751  : public GridLayout_tA
 // TrackImageManager
 struct TrackImageManager_t63D42C051FFE3B6BEFCD73A4C75A8096BE5389CF  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// UnityEngine.XR.ARFoundation.ARTrackedImageManager TrackImageManager::ARTrackedImageManager
+	ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4* ___ARTrackedImageManager_4;
 };
 
 // UnityEngine.SpatialTracking.TrackedPoseDriver

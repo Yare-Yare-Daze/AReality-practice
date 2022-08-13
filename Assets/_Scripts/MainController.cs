@@ -5,24 +5,39 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject CarSpawner;
+    public List<GameObject> ControllingGameObjects;
 
     private void Awake()
     {
-        CarSpawner.SetActive(false);
+        foreach (var cGO in ControllingGameObjects)
+        {
+            cGO.SetActive(false);
+        }
     }
 
     public void OnClickCarDriverButton()
     {
-        if (CarSpawner == null) return;
+        if (ControllingGameObjects == null) return;
 
-        CarSpawner.SetActive(true);
+        ControllingGameObjects[0].SetActive(true);
+    }
+    
+    public void OnClickTrackImageButton()
+    {
+        if (ControllingGameObjects == null) return;
+        
+        ControllingGameObjects[1].SetActive(true);
     }
 
     public void OnClickClearButton()
     {
-        if (CarSpawner == null) return;
-        
-        CarSpawner.SetActive(false);
+        if (ControllingGameObjects == null) return;
+
+        foreach (var cGo in ControllingGameObjects)
+        {
+            cGo.SetActive(false);
+        }
     }
+
+    
 }

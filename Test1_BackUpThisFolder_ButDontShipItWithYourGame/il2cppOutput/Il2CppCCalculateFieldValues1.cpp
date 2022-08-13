@@ -298,6 +298,8 @@ struct List_1_tF2FE88545EFEC788CAAE6C74EC2F78E937FCCAC3;
 struct List_1_t55B85B981AC5FD6A5358491F90FE354F78BB97DE;
 // System.Collections.Generic.List`1<UnityEngine.GUILayoutEntry>
 struct List_1_tA5BCD116CC751A5F35C7D3D7B96DC3A5D22B9C82;
+// System.Collections.Generic.List`1<UnityEngine.GameObject>
+struct List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B;
 // System.Collections.Generic.List`1<UnityEngine.TextCore.Glyph>
 struct List_1_t95DB74B8EE315F8F92B7B96D93C901C8C3F6FE2C;
 // System.Collections.Generic.List`1<UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord>
@@ -600,6 +602,8 @@ struct ARSession_t13374A44A01F2C6D90578F93E0F0DA2482BE3014;
 struct ARSessionOrigin_tE7B28A1A19500BCC02711397A19E330425830BC3;
 // UnityEngine.XR.ARFoundation.ARTrackable
 struct ARTrackable_t1D98417758C08E98A333CDEC0C2C1688CE10B2E0;
+// UnityEngine.XR.ARFoundation.ARTrackedImageManager
+struct ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4;
 // System.Action
 struct Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07;
 // UnityEngine.AndroidJavaClass
@@ -14120,8 +14124,8 @@ struct LightEstimation_tC71C2BFBF0D90D5AF6284B5EB4AE3DD1F3654309  : public MonoB
 // MainController
 struct MainController_tE084A72D51B125AA30DB8220A2EE35184D69BC59  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// UnityEngine.GameObject MainController::CarSpawner
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___CarSpawner_4;
+	// System.Collections.Generic.List`1<UnityEngine.GameObject> MainController::ControllingGameObjects
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___ControllingGameObjects_4;
 };
 
 // MarkerController
@@ -14445,6 +14449,13 @@ struct TextMeshSpawner_tB6905931E9BE4D7A2A2E37A51E221A7B462D75BB  : public MonoB
 	Font_tC95270EA3198038970422D78B74A7F2E218A96B6* ___TheFont_6;
 	// TMPro.Examples.TextMeshProFloatingText TMPro.Examples.TextMeshSpawner::floatingText_Script
 	TextMeshProFloatingText_t833773B79A4826E78EDF2799C157B0EC3ACACB31* ___floatingText_Script_7;
+};
+
+// TrackImageManager
+struct TrackImageManager_t63D42C051FFE3B6BEFCD73A4C75A8096BE5389CF  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// UnityEngine.XR.ARFoundation.ARTrackedImageManager TrackImageManager::ARTrackedImageManager
+	ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4* ___ARTrackedImageManager_4;
 };
 
 // UnityEngine.SpatialTracking.TrackedPoseDriver
@@ -16722,10 +16733,13 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3636[9] =
 	static_cast<int32_t>(offsetof(CubeMoveAndRotate_t87B0B6A1E5FF490B0AFC212F99E24EFA1B3782B2, ___moveSpeed_4)),static_cast<int32_t>(offsetof(CubeMoveAndRotate_t87B0B6A1E5FF490B0AFC212F99E24EFA1B3782B2, ___rotateSpeed_5)),static_cast<int32_t>(offsetof(CubeMoveAndRotate_t87B0B6A1E5FF490B0AFC212F99E24EFA1B3782B2, ___rotateDuration_6)),static_cast<int32_t>(offsetof(CubeMoveAndRotate_t87B0B6A1E5FF490B0AFC212F99E24EFA1B3782B2, ____targetPos_7)),static_cast<int32_t>(offsetof(CubeMoveAndRotate_t87B0B6A1E5FF490B0AFC212F99E24EFA1B3782B2, ____rigidbody_8)),static_cast<int32_t>(offsetof(CubeMoveAndRotate_t87B0B6A1E5FF490B0AFC212F99E24EFA1B3782B2, ____targetRotationVector_9)),static_cast<int32_t>(offsetof(CubeMoveAndRotate_t87B0B6A1E5FF490B0AFC212F99E24EFA1B3782B2, ____rotateDone_10)),static_cast<int32_t>(offsetof(CubeMoveAndRotate_t87B0B6A1E5FF490B0AFC212F99E24EFA1B3782B2, ____touch_11)),static_cast<int32_t>(offsetof(CubeMoveAndRotate_t87B0B6A1E5FF490B0AFC212F99E24EFA1B3782B2, ____mainCamera_12)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3637[1] = 
 {
-	static_cast<int32_t>(offsetof(MainController_tE084A72D51B125AA30DB8220A2EE35184D69BC59, ___CarSpawner_4)),};
+	static_cast<int32_t>(offsetof(MainController_tE084A72D51B125AA30DB8220A2EE35184D69BC59, ___ControllingGameObjects_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3638[6] = 
 {
 	static_cast<int32_t>(offsetof(MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33, ___markerPrefab_4)),static_cast<int32_t>(offsetof(MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33, ___ARRaycastManager_5)),static_cast<int32_t>(offsetof(MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33, ___ARPlaneManager_6)),static_cast<int32_t>(offsetof(MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33, ___CurrentPlane_7)),static_cast<int32_t>(offsetof(MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33, ____markerGO_8)),static_cast<int32_t>(offsetof(MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33, ____cameraMain_9)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3639[1] = 
+{
+	static_cast<int32_t>(offsetof(TrackImageManager_t63D42C051FFE3B6BEFCD73A4C75A8096BE5389CF, ___ARTrackedImageManager_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3647[12] = 
 {
 	static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_OnCharacterSelection_4)),static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_OnSpriteSelection_5)),static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_OnWordSelection_6)),static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_OnLineSelection_7)),static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_OnLinkSelection_8)),static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_TextComponent_9)),static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_Camera_10)),static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_Canvas_11)),static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_selectedLink_12)),static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_lastCharIndex_13)),static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_lastWordIndex_14)),static_cast<int32_t>(offsetof(TMP_TextEventHandler_t1B20EF196557E1AC0E6AB6AACFA95740CC17A333, ___m_lastLineIndex_15)),};

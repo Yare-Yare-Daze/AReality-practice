@@ -1,18 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public class TrackImageManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public ARTrackedImageManager ARTrackedImageManager;
+
+    public void OnEnable()
     {
-        
+        ARTrackedImageManager.trackedImagesChanged += OnImageChanged;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnDisable()
     {
-        
+        ARTrackedImageManager.trackedImagesChanged -= OnImageChanged;
+    }
+
+    private void OnImageChanged(ARTrackedImagesChangedEventArgs args)
+    {
+        foreach (var trackedImage in args.added)
+        {
+            Debug.Log(trackedImage.name);
+        }
     }
 }
