@@ -5,115 +5,108 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public List<GameObject> ControllingGameObjects;
+    enum ECurrentState
+    {
+        none = 0,
+        carSpawning,
+        trackingImage,
+        /*debugging,*/
+        createObjectOnPlane
+    }
     
-    private GameObject _debugPanel;
-    private GameObject _carSpawner;
-    private GameObject _trackImage;
-    private bool _isCarSpawning = false;
-    private bool _isTrackingImage = false;
-    private bool _isDebugging = false;
+    public List<GameObject> controllingGameObjects;
+    public GameObject debugGO;
+
+    private ECurrentState _state = ECurrentState.none;
 
     private void Awake()
     {
-        foreach (var cGO in ControllingGameObjects)
-        {
-            cGO.SetActive(false);
-        }
+        ClearState();
+        
+        DebugPanel.debugText += _state;
     }
 
     private void Start()
     {
-        foreach (var cGO in ControllingGameObjects)
-        {
-            if (cGO.gameObject.name == "Car Spawner")
-            {
-                _carSpawner = cGO;
-            }
-            else if (cGO.gameObject.name == "TrackImage")
-            {
-                _trackImage = cGO;
-            }
-            else if (cGO.gameObject.name == "DebugPanel")
-            {
-                _debugPanel = cGO;
-            }
-        }
+        
     }
 
     public void OnClickCarDriverButton()
     {
-        /*if (_carSpawner == null) return;
-
-        if (!_isCarSpawning)
+        if (_state != ECurrentState.carSpawning)
         {
-            _carSpawner.SetActive(true);
-            _isCarSpawning = true;
+            ClearState();
+            GameObject tempGO = controllingGameObjects.Find(x => x.name.Contains("Car Spawner"));
+            tempGO.SetActive(true);
+            _state = ECurrentState.carSpawning;
+            
+            DebugPanel.debugText += _state;
         }
-        else
-        {
-            _carSpawner.SetActive(false);
-            _isCarSpawning = false;
-        }*/
-        
-        ChangeActiveOnClick(ref _isCarSpawning, _carSpawner);
-        
     }
     
     public void OnClickTrackImageButton()
     {
-        /*if (_trackImage == null) return;
-
-        if (!_isTrackingImage)
+        if (_state != ECurrentState.trackingImage)
         {
-            _trackImage.SetActive(true);
-            _isTrackingImage = true;
+            ClearState();
+            GameObject tempGO = controllingGameObjects.Find(x => x.name.Contains("TrackImage"));
+            tempGO.SetActive(true);
+            _state = ECurrentState.trackingImage;
+            
+            DebugPanel.debugText += _state;
         }
-        else
-        {
-            _trackImage.SetActive(false);
-            _isTrackingImage = false;
-        }*/
-        
-        ChangeActiveOnClick(ref _isTrackingImage, _trackImage);
     }
     
     public void OnClickDebugButton()
     {
-        /*if (_debugPanel == null) return;
-
-        if (!_isDebugging)
+        if (!debugGO.activeSelf)
         {
-            _debugPanel.SetActive(true);
-            _isDebugging = true;
+            debugGO.SetActive(true);
         }
         else
         {
-            _debugPanel.SetActive(true);
-            _isDebugging = false;
+            debugGO.SetActive(false);
+        }
+
+        /*if (_state != ECurrentState.debugging)
+        {
+            ClearState();
+            GameObject tempGO = controllingGameObjects.Find(x => x.name.Contains("DebugPanel"));
+            tempGO.SetActive(true);
+            _state = ECurrentState.debugging;
+            
+            DebugPanel.debugText += _state;
         }*/
-        
-        ChangeActiveOnClick(ref _isDebugging, _debugPanel);
     }
 
-    private void ChangeActiveOnClick(ref bool isSomething, GameObject go)
+    public void OnClickCreateAndMoveButton()
     {
-        if (go == null) return;
-        
-        
-        
-        if (!isSomething)
+        if (_state != ECurrentState.createObjectOnPlane)
         {
-            go.SetActive(true);
-            isSomething = true;
+            ClearState();
+            GameObject tempGO = controllingGameObjects.Find(x => x.name.Contains("CreateAndMoveObjects"));
+            tempGO.SetActive(true);
+            _state = ECurrentState.createObjectOnPlane;
+            
+            DebugPanel.debugText += _state;
         }
-        else
-        {
-            go.SetActive(false);
-            isSomething = false;
-        }
+    }
+    
+    public void OnClickClearButton()
+    {
+        ClearState();
         
-        Debug.Log(go.name + " is " + go.activeInHierarchy);
-        Debug.Log("isSomething = " + isSomething);
+        DebugPanel.debugText += _state;
+    }
+
+    private void ClearState()
+    {
+        foreach (var cGO in controllingGameObjects)
+        {
+            cGO.SetActive(false);
+        }
+
+        _state = ECurrentState.none;
+        
     }
 }

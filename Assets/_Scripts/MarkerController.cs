@@ -8,17 +8,18 @@ using UnityEngine.XR.ARSubsystems;
 public class MarkerController : MonoBehaviour
 {
     public GameObject markerPrefab;
-    public ARRaycastManager ARRaycastManager;
-    public ARPlaneManager ARPlaneManager;
     [CanBeNull] public ARPlane CurrentPlane;
     public GameObject _markerGO;
 
+    private ARRaycastManager ARRaycastManager;
+    private ARPlaneManager ARPlaneManager;
     private Camera _cameraMain;
 
     void Start()
     {
-        ARRaycastManager = GetComponent<ARRaycastManager>();
-        ARPlaneManager = GetComponent<ARPlaneManager>();
+        GameObject ArSessionOrigin = GameObject.Find("AR Session Origin");
+        ARRaycastManager = ArSessionOrigin.GetComponent<ARRaycastManager>();
+        ARPlaneManager = ArSessionOrigin.GetComponent<ARPlaneManager>();
         _cameraMain = Camera.main;
         _markerGO = Instantiate(markerPrefab);
         CurrentPlane = null;

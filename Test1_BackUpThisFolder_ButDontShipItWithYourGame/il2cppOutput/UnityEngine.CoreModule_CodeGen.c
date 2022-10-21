@@ -2497,8 +2497,8 @@ extern void GameObject__ctor_m7D0340DE160786E6EFA8DABD39EC3B694DA30AAD (void);
 extern void GameObject__ctor_m721D643351E55308EA4F5F41B67D5446D11C61F0 (void);
 // 0x00000528 System.Void UnityEngine.GameObject::Internal_CreateGameObject(UnityEngine.GameObject,System.String)
 extern void GameObject_Internal_CreateGameObject_mFABE4AB825D9A336A69BD2C45F0506DFEC9F62F9 (void);
-// 0x00000529 UnityEngine.GameObject UnityEngine.GameObject::get_gameObject()
-extern void GameObject_get_gameObject_m0878015B8CF7F5D432B583C187725810D27B57DC (void);
+// 0x00000529 UnityEngine.GameObject UnityEngine.GameObject::Find(System.String)
+extern void GameObject_Find_mFF1D6C65A7E2CD82443F4DCE4C53472FB30B7F51 (void);
 // 0x0000052A System.Int32 UnityEngine.LayerMask::op_Implicit(UnityEngine.LayerMask)
 extern void LayerMask_op_Implicit_m5D697E103A7CB05CADCED9F90FD4F6BAE955E763 (void);
 // 0x0000052B UnityEngine.LayerMask UnityEngine.LayerMask::op_Implicit(System.Int32)
@@ -5457,7 +5457,7 @@ static Il2CppMethodPointer s_methodPointers[2196] =
 	GameObject__ctor_m7D0340DE160786E6EFA8DABD39EC3B694DA30AAD,
 	GameObject__ctor_m721D643351E55308EA4F5F41B67D5446D11C61F0,
 	GameObject_Internal_CreateGameObject_mFABE4AB825D9A336A69BD2C45F0506DFEC9F62F9,
-	GameObject_get_gameObject_m0878015B8CF7F5D432B583C187725810D27B57DC,
+	GameObject_Find_mFF1D6C65A7E2CD82443F4DCE4C53472FB30B7F51,
 	LayerMask_op_Implicit_m5D697E103A7CB05CADCED9F90FD4F6BAE955E763,
 	LayerMask_op_Implicit_mDC9C22C4477684D460FCF25B1BFE6B54419FB922,
 	ManagedStreamHelpers_ValidateLoadFromStream_m4D3540AC5E72B77BBC197B5C9C2C9AD85EF8E215,
@@ -8295,7 +8295,7 @@ static const int32_t s_InvokerIndices[2196] =
 	4482,
 	1912,
 	6407,
-	4386,
+	6786,
 	6694,
 	6730,
 	6944,

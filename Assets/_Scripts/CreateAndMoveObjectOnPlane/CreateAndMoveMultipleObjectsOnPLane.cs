@@ -17,7 +17,7 @@ public class CreateAndMoveMultipleObjectsOnPLane : MonoBehaviour
     
     void Start()
     {
-        _arRaycastManager = GetComponent<ARRaycastManager>();
+        _arRaycastManager = GameObject.Find("AR Session Origin").GetComponent<ARRaycastManager>();
     }
 
     void Update()

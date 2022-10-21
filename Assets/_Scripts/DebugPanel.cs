@@ -1,18 +1,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DebugPanel : MonoBehaviour
 {
+    public static string debugText = "";
     public float speed = 5f;
     public float maxAnchorMinValue = 0.5f;
     
     private RectTransform _rectTransform;
+    private GameObject _textInButtonGO;
+    private TextMeshPro _text;
 
     private void Awake()
     {
+        _textInButtonGO = gameObject.transform.GetChild(0).gameObject;
+        _text = _textInButtonGO.GetComponent<TextMeshPro>();
         _rectTransform = GetComponent<RectTransform>();
+    }
+
+    private void Update()
+    {
+        _text.text = debugText;
     }
 
     private void OnEnable()
