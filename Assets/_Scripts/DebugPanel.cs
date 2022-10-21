@@ -13,12 +13,13 @@ public class DebugPanel : MonoBehaviour
     
     private RectTransform _rectTransform;
     private GameObject _textInButtonGO;
-    private TextMeshPro _text;
+    private TextMeshProUGUI _text;
 
     private void Awake()
     {
         _textInButtonGO = gameObject.transform.GetChild(0).gameObject;
-        _text = _textInButtonGO.GetComponent<TextMeshPro>();
+        Debug.Log("_textInButtonGO = " + _textInButtonGO);
+        _text = _textInButtonGO.GetComponent<TextMeshProUGUI>();
         _rectTransform = GetComponent<RectTransform>();
     }
 

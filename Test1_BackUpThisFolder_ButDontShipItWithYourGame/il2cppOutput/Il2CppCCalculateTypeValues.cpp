@@ -54110,8 +54110,8 @@ struct DebugPanel_tCD2B9C147083643BCAC57522D1F41AE8BBD2BC57  : public MonoBehavi
 	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____rectTransform_7;
 	// UnityEngine.GameObject DebugPanel::_textInButtonGO
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____textInButtonGO_8;
-	// TMPro.TextMeshPro DebugPanel::_text
-	TextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E* ____text_9;
+	// TMPro.TextMeshProUGUI DebugPanel::_text
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ____text_9;
 };
 
 struct DebugPanel_tCD2B9C147083643BCAC57522D1F41AE8BBD2BC57_StaticFields

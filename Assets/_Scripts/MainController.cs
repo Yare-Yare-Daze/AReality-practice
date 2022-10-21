@@ -23,7 +23,7 @@ public class MainController : MonoBehaviour
     {
         ClearState();
         
-        DebugPanel.debugText += _state;
+        DebugPanel.debugText += $"{_state}\n";
     }
 
     private void Start()
@@ -40,7 +40,7 @@ public class MainController : MonoBehaviour
             tempGO.SetActive(true);
             _state = ECurrentState.carSpawning;
             
-            DebugPanel.debugText += _state;
+            DebugPanel.debugText += $"{_state}\n";
         }
     }
     
@@ -53,7 +53,7 @@ public class MainController : MonoBehaviour
             tempGO.SetActive(true);
             _state = ECurrentState.trackingImage;
             
-            DebugPanel.debugText += _state;
+            DebugPanel.debugText += $"{_state}\n";
         }
     }
     
@@ -88,7 +88,7 @@ public class MainController : MonoBehaviour
             tempGO.SetActive(true);
             _state = ECurrentState.createObjectOnPlane;
             
-            DebugPanel.debugText += _state;
+            DebugPanel.debugText += $"{_state}\n";
         }
     }
     
@@ -96,7 +96,7 @@ public class MainController : MonoBehaviour
     {
         ClearState();
         
-        DebugPanel.debugText += _state;
+        DebugPanel.debugText += $"{_state}\n";
     }
 
     private void ClearState()
